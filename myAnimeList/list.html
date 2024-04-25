@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAnimeList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./list.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/homePage/index.html"><lord-icon  src="https://cdn.lordicon.com/ywibiysa.json" trigger="hover" ></lord-icon></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="navbar-toggler-icon"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/homePage/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/Anime/anime.html">Anime</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/myAnimeList/list.html">My List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login/login.html">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+
+        <section class="welcome mt-4 text-center">
+            <div class="container w-100">
+                <h3 id="welcome">welcome <span>email</span></h3>
+                <hr>
+            </div>
+        </section>
+        <section id="listOfYourAnime" class="mt-4">
+            <div class="container w-100">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" data-bs-toggle="tab" href="#watch">Watching</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " aria-current="page" data-bs-toggle="tab" href="#completed">Completed</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" data-bs-toggle="tab" href="#planToWatch">Plan To Watch</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="watch" class="active tab-pane fade in show">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                  <th scope="col" class="col-3">Image</th>
+                                  <th scope="col" class="col-6">Title</th>
+                                  <th scope="col" class="col-1">Edit</th>
+                                  <th scope="col" class="col-1">Remove</th>
+                                </tr>
+                              </thead>
+                              
+                          </table>
+                    </div>
+                    <div id="completed" class="tab-pane fade">
+                        <table class="table align-middle table-hover">
+                            <thead>
+                                <tr>
+                                  <th scope="col" class="col-3">Image</th>
+                                  <th scope="col" class="col-6">Title</th>
+                                  <th scope="col" class="col-1">edit</th>
+                                  <th scope="col" class="col-1">Remove</th>
+                                </tr>
+                              </thead>
+                          </table>
+                    </div>
+                    <div id="planToWatch" class="tab-pane fade">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                  <th scope="col" class="col-3">Image</th>
+                                  <th scope="col" class="col-6">Title</th>
+                                  <th scope="col" class="col-1">edit</th>
+                                  <th scope="col" class="col-1">Remove</th>
+                                </tr>
+                              </thead>
+                          </table>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this series?</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-secondary fw-lighter p-0 m-0 pe-1 ps-1 me-1 ms-1" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info p-0 m-0 pe-2 fw-lighter ps-2 me-1 ms-1" id="okBtnDelete" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="align-middle text-center">Edit status</p>
+        <button type="button" class="btn-close editBtnClose" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <select class="form-select form-select-md selectStatus mb-3" aria-label="Large select example">
+      
+          <option selected value="watch">Watching</option>
+          <option value="compelted">Completed</option>
+          <option value="planToWatch">Plan to watch</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+    <footer>
+      <section class="coverBackGroudFooter">
+        <section class="footerText container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="d-flex w-100 justify-content-center gap-2 linkPagesFooter">
+                <li class="fw-lighter">Home</li>
+                <li class="fw-lighter">Anime</li>
+                <li class="fw-lighter">My list</li>
+                <li class="fw-lighter">Login</li>
+              </ul>
+            </div>
+            <div class="col-12 d-flex w-100 justify-content-center gap-2">
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="./list.js"></script>
+</body>
+</html>
+
+
+
+    

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #130c3d;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#header{
+    width: 100%;
+    min-height:40%;
+    background-image: url(/images/header\ img.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.navbar li a{
+    color: aqua ;
+}
+.navbar-nav li a:hover{
+    color: #e0d9f6;
+    color: #c252e1;
+}
+.navbar-toggler-icon{
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgb(0, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+    color: aqua;
+    border-color: rgb(0, 255, 255);
+}
+@media (max-width:320px) {
+    .navbar li a{
+        color: #130c3d ;
+        font-weight: bold;
+    }
+}
+.welcome div h3, .welcome div hr{
+    color: #e0d9f6 !important;
+}
+table tr td{
+    background-color: #e0d9f6 !important;
+    font-size: larger;
+    /* font-weight: bolder; */
+}
+table tr th{
+    background-color: #e0d9f6 !important;
+}
+table{
+    border: 2px solid #130c3d !important;
+   
+}
+tr .icon{
+    cursor: pointer;
+    text-align: center;
+   
+}
+@media (max-width:320px) {
+    table tr td{
+        background-color: #e0d9f6 !important;
+        font-size: small;
+        /* font-weight: bolder; */
+    }
+}
+footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background-image: url(/images/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* opacity: 0.1; */
+}
+.coverBackGroudFooter{
+    width: 100%;
+    height: 100%;
+    background-color: #130c3dc9;
+}
+.footerText{
+    color: #e0d9f6;
+    height: 100%;
+}
+.footerText .row{
+    height: 100%;
+}
+.footerText ul{
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+.footerText ul li:hover{
+    text-decoration: underline;
+}
+.footerText i{
+    cursor: pointer;
+}

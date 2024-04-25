@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/images/bgLogin3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#header{
+    width: 100%;
+    min-height:15%;
+    backdrop-filter: blur(10px);
+}
+.navbar li a{
+    color: aqua ;
+}
+.navbar-nav li a:hover{
+    color: #e0d9f6;
+    color: #c252e1;
+}
+.navbar-toggler-icon{
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgb(0, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+    color: aqua;
+    border-color: rgb(0, 255, 255);
+}
+@media (max-width:320px) {
+    .navbar li a{
+        color: aqua ;
+        font-weight: bold;
+    }
+}
+main{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+.card{
+    background-color: #c252e100;
+    backdrop-filter: blur(20px);
+    height: 70%;
+    border: 2px solid white;
+    box-shadow: rgb(7, 5, 5) 0px 22px 70px 4px;
+    /* box-shadow: ; */
+}
+
+@media (width:1680px) {
+    .card{
+       
+        height: 40%;
+        
+    }
+    .loginCardParent{
+       max-height: 100% !important;
+    }
+    main{
+        margin-top: 17%;
+    }
+    .card-title{
+        color: white !important;
+    }
+}
+@media (width: 768px) {
+    main{
+        margin-top: 35% !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .card{
+        height: 70%;
+        width: 40% !important;
+        border: 2px solid white;
+    }
+    .form-text small{
+        font-size: 15px !important;
+    }
+    main{
+        margin-top: 5%;
+    }
+    form small p a{
+        font-size: 10px !important;
+    }
+    form >small>p{
+        color: #221958;
+        font-size: 10px !important;
+    }
+    .card-title{
+        color: white !important;
+    }
+    .button{
+        font-size: small !important;
+    }
+}
+@media (max-width:320px) {
+    main{
+        margin-top: 0% !important;
+    }
+    .form-text small{
+        font-size: 5px !important;
+    }
+}
+.card-body h4{
+    color: white;
+}
+form input{
+    background-color: #130c3d00 !important;
+    border-color: #130c3d00 !important;
+    border-bottom: 2px solid white !important;
+    outline: none !important;
+}
+.input-group .btn{
+    background-color: #130c3d00 !important;
+    border-color: #130c3d00 !important;
+    border-bottom: 2px solid white !important;
+    color: white !important;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e0d9f6;
+    font-weight: lighter;
+    opacity: 0.5; /* Firefox */
+}
+small{
+    color: #e0d9f6;
+}
+input{
+    color: white !important;
+}
+form p a{
+    color: #221958;
+}
+
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow:  0 -1px 0 #ddd;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <header class="" id="header">
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html"><lord-icon  src="https://cdn.lordicon.com/ywibiysa.json" trigger="hover" ></lord-icon></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="navbar-toggler-icon"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/Anime/anime.html">Anime</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/myAnimeList/list.html">My List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login/login.html">Login</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="input-group">
+                  <input class="form-control inputSearchHome" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn buttonSearch text-center" type="submit"><lord-icon class="iconSearch" src="https://cdn.lordicon.com/kkvxgpti.json" trigger="hover"></lord-icon></button>
+                    </div>
+                  
+                </form>
+              </div>
+            </div>
+          </nav>
+          <section class="textHeader">
+            <p class="fs-2">SPIRITED AWAY</p>
+            <p class="fs-6">10-year-old Chihiro (Daveigh Chase) moves with her parents to a new home in the Japanese countryside. After taking a wrong turn down a wooded path, Chihiro and her parents discover an amusement park with a stall containing an assortment of food. To her surprise, Chihiro's parents begin eating and then transform into pigs. In this supernatural realm, Chihiro encounters a host of characters and endures labor in a bathhouse for spirits, awaiting a reunion with her parents.</p>
+          </section>
+          <button class="btn summeryButton" data-bs-toggle="modal" data-bs-target="#modal0">Tap to read summery</button>
+          <!-- Scrollable modal -->
+          <section class="modal fade" id="modal0">
+            <div class="modal-dialog modal-dialog-scrollable clickSummeryButton" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                       <p class="">SPIRITED AWAY</p> 
+                    </div>
+                    <div class="modal-body">
+                <p class="">10-year-old Chihiro (Daveigh Chase) moves with her parents to a new home in the Japanese countryside. After taking a wrong turn down a wooded path, Chihiro and her parents discover an amusement park with a stall containing an assortment of food. To her surprise, Chihiro's parents begin eating and then transform into pigs. In this supernatural realm, Chihiro encounters a host of characters and endures labor in a bathhouse for spirits, awaiting a reunion with her parents.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary " data-bs-dismiss="modal">close</button>
+                    </div>
+                </div>
+                
+            </div>
+          </section>
+    </header>
+    <main>
+        <section class="container parentSliderGeners mb-4">
+            <div class="mb-4">
+                <p class="fs-3 text-center  mt-5 titleGeners border-bottom fw-lighter">Geners</p>
+            </div>
+            <div class="parentOfCarousel">
+            </div>
+        </section>
+
+        <section class="season container d-flex flex-column">
+          <div id="liveAlertPlaceholder"></div>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#now" data-bs-toggle="tab">Airing now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#spring" data-bs-toggle="tab">Spring</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#summer" data-bs-toggle="tab">Summer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fall" data-bs-toggle="tab">Fall</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#winter"  data-bs-toggle="tab">Winter</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="now" class="active tab-pane fade in show">
+            </div>
+            <div id="spring" class="tab-pane fade">
+              
+            </div>
+            <div id="summer" class="tab-pane fade">
+              
+            </div>
+            <div id="fall" class="tab-pane fade">
+              
+            </div>
+            <div id="winter" class="tab-pane fade">
+              
+            </div>
+            
+          </div>
+        
+        </section>
+
+
+        <section class="container parentSliderTrand mt-5">
+            <section id="trending">
+              <div class="container1 mb-4">
+                <h3 class="text-center section-subheading">Trending animes</h3>
+                <hr style="color: #e0d9f6;">
+              </div>
+              <div class="container1">
+                <div class="swiper tranding-slider">
+                  <div class="swiper-wrapper">
+                  </div>
+                  <div class="tranding-slider-control">
+                    <div class="swiper-button-prev slider-arrow">
+                      <ion-icon name="'arrow-back-outline"></ion-icon>
+                    </div>
+                    <div class="swiper-button-next slider-arrow">
+                      <ion-icon name="'arrow-forward-outline"></ion-icon>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </section>
+
+        <section class="chQoutParent container">
+          <h3 class="text-center">Character qout</h3>
+          <hr>
+          <div class="card cardQout text-bg-dark">
+            <img src="/images/qout.jpg" class="card-img" alt="...">
+           
+            <div class="card-img-overlay">
+              <div class="parentInputQout">
+                <div class="input-group smallInput mb-3">
+                  <input type="text" class="form-control" placeholder="character's name" aria-label="Sizing example input" aria-describedby="">
+                  <button class="btn buttonSearchQoutSm p-0 m-0">Search</button>
+                </div>
+                <div class="input-group mainInput mb-5">
+                  <input type="text" class="form-control inputSearchQout" placeholder="Your fav character's name :>" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary p-0 pe-2 ps-2 qoutBtn" type="button" id="button-addon2">Search</button>
+                </div>
+              
+              </div>
+              <h5 class="card-title cardTitleQout"></h5>
+              <p class="card-text cardTextQout"></p>
+              <p class="card-text cardTextSmallQout"><small></small></p>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="parentOfReview text-center container">
+          <h3 class="headerOfReview">Latest Reviews</h3>
+          <hr>
+          <div class="cotainer parentOfCardsReview">
+          </div>
+        </section>
+
+
+        
+    </main>
+    <footer>
+      <section class="coverBackGroudFooter">
+        <section class="footerText container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="d-flex w-100 justify-content-center gap-2 linkPagesFooter">
+                <li class="fw-lighter">Home</li>
+                <li class="fw-lighter">Anime</li>
+                <li class="fw-lighter">My list</li>
+                <li class="fw-lighter">Login</li>
+              </ul>
+            </div>
+            <div class="col-12 d-flex w-100 justify-content-center gap-2">
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+

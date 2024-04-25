@@ -1,0 +1,546 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #130c3d;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#header{
+    width: 100%;
+    min-height:40%;
+    background-image: url(/images/header\ img.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.navbar li a{
+    color: aqua ;
+}
+.navbar-nav li a:hover{
+    color: #e0d9f6;
+    color: #c252e1;
+}
+.navbar-toggler-icon{
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke=' rgb(0, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+    color: aqua;
+    border-color: rgb(0, 255, 255);
+}
+@media (max-width:320px) {
+    .navbar li a{
+        color: #130c3d ;
+        font-weight: bold;
+    }
+}
+.parentOfSearchInput input{
+    background-color: #130c3d !important;
+    border-color: aqua;
+    color: #e0d9f6 !important;
+}
+.buttonSearch{
+    background-color: aqua;
+
+}
+.buttonSearch:hover{
+    color: #e0d9f6;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e0d9f6;
+    font-weight: lighter;
+    opacity: 0.5; /* Firefox */
+}
+.card{
+    position: relative;
+    border: 2px solid aqua;
+    overflow: hidden;
+}
+.card:hover .cardBody{
+    right: 0;
+}
+.card .cardBody{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -255px;
+    position: absolute;
+    background-color: #130c3d53;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    transition: 2s;
+    padding: 5px;
+    font-size: x-large;
+}
+.card-img-overlay > .card-title{
+    color: #e0d9f6;
+    background-color: #000000a1;
+    font-weight: bolder;
+}
+.card-img-overlay > .card-text{
+    color: black;
+}
+.parentOfResultSearch h6, .parentOfResultSearch hr{
+    
+    color: #e0d9f6;
+}
+.parentOfResultSearch h6{
+    display: none;
+    font-size: x-large;
+}
+@media (max-width:320px) {
+    .parentOfResultSearch h6{
+        font-size: small;
+    }
+    .card .cardBody{
+        font-size: 5px;
+    }
+    .cardBody .input-group{
+        margin: 0 !important;
+    }
+    .cardBody .input-group button, .cardBody .input-group a{
+        font-size: 5px !important;
+        margin: 0 !important;
+        margin: auto !important;
+        padding: 0 !important;
+
+    }
+    .cardBody .input-group a{
+        padding-left: 2px;
+    }
+    .cardBody .input-group button{
+        padding-right: 2px;
+    }
+}
+@media (max-width: 768px) {
+    .card .cardBody{
+        font-size: medium;
+    }
+    .cardBody .input-group{
+        margin: 0 !important;
+    }
+    .cardBody .input-group button, .cardBody .input-group a{
+        font-size: medium !important;
+        margin: 0 !important;
+        margin: auto !important;
+        padding: 0 !important;
+
+    }
+    .cardBody .input-group a{
+        padding-left: 5px;
+    }
+    .cardBody .input-group button{
+        padding-right: 5px;
+    }
+}
+
+
+
+
+/* card recommend style start from here */
+.cardAnimateRecommend{
+    position: relative;
+    /* width: 550px; */
+    width: 100%;
+    height: 180px;
+    background-color: #333;
+    transition: 0.5s;
+}
+.cardAnimateRecommend:hover{
+    width: 550px;
+    height: 450px;
+    margin-left: 20%;
+}
+.cardAnimateRecommend .lines{
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    /* overflow: hidden; */
+}
+.cardAnimateRecommend .lines::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+    animation: animate 4s linear infinite;
+    animation-play-state: paused;
+}
+.cardAnimateRecommend:hover .lines::before{
+    animation-play-state: running;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+.cardAnimateRecommend{
+    border: 0;
+}
+.cardAnimateRecommend .lines::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+.cardAnimateRecommend .imgBX{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 125px;
+    height: 170px;
+    transform: translateX(-50%,);
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardAnimateRecommend:hover .imgBX{
+    top: 10px;
+    width: 150px;
+    height: 200px;
+    left: 35%;
+}
+.cardAnimateRecommend .imgBX::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: animate2 6s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes animate2{
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+.cardAnimateRecommend:hover .imgBX::before{
+    animation-play-state: running;
+}
+.cardAnimateRecommend .imgBX::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+.cardAnimateRecommend .imgBX img{
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+    width: 113px;
+    left: 5px;
+    top: 5px;
+}
+
+.cardAnimateRecommend:hover .imgBX img{
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+    width: 133px;
+}
+.horizontal{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.cardAnimateRecommend .content{
+    color: aqua;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.time-left{
+    font-size: medium;
+    font-weight: lighter;
+}
+.cardAnimateRecommend .vertical .card-title{
+    font-size: x-large;
+}
+/* responsive here */
+@media (max-width:320px) {
+    .cardAnimateRecommend .vertical .card-title{
+        font-size: smaller;
+        width: 50px;
+        margin-left: 100px;
+    }
+    .time-left{
+        font-size: 5px;
+        font-weight: lighter;
+        margin-left: 100px;
+    }
+    
+    .cardAnimateRecommend .imgBX{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 125px;
+        height: 170px;
+        transform: translateX(-50%,);
+        background: #000;
+        transition: 0.5s;
+        z-index: 10;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardAnimateRecommend:hover .imgBX{
+        top: 10px;
+        width: 150px;
+        height: 200px;
+        left: 22%;
+    }
+    .cardAnimateRecommend:hover{
+        width: 100%;
+        height: 450px;
+        margin: 0 !important;
+    }
+    .cardAnimateRecommend{
+        position: relative;
+        width: 100%;
+        height: 180px;
+        background-color: #333;
+        transition: 0.5s;
+        left: -20px;
+    }
+    .horizontal .card-text{
+        font-size: small;
+    }
+}
+#parentNavCharacters h6{
+    font-size: x-large;
+}
+@media (min-width:768px) {
+    body{
+        width: 99vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .cardAnimateRecommend{
+        position: relative;
+        width: 100%;
+        height: 180px;
+        background-color: #333;
+        transition: 0.5s;
+        left: -25px;
+    }
+    .cardAnimateRecommend .vertical .card-title{
+        font-size: medium;
+        width: 400px;
+    }
+    .time-left{
+        font-size: small;
+    }
+    #parentNavCharacters h6{
+        font-size: large;
+    }
+}
+
+.cardAnimateRecommend:hover .vertical{
+    display: none;
+}
+.cardAnimateRecommend:hover .horizontal{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.horizontal .card-text{
+    font-size: large;
+    font-weight: lighter;
+    width: 80%;
+    height: 40%;
+}
+.horizontal button{
+    font-weight: lighter;
+    background-color: #ff3c7b;
+    color: #130c3d;
+    padding: 0 ;
+    margin: 0 ;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0;
+}
+.parentOfRecommend h6, .parentOfRecommend hr{
+    color: #e0d9f6;
+}
+.characterHoverParent p{
+    font-size: 10px;
+}
+.parentOfRecommend h6{
+    font-size: x-large;
+}
+.cardDescription{
+    background-color: #130c3d;
+    color: #e0d9f6;
+}
+.imageOfDescription{
+    cursor: pointer;
+}
+.btn-close{
+    background-color: red;
+    
+}
+.descriptionCharacter{
+    display: none;
+}
+#searchForCharacters{
+    display: none;
+}
+#searchForCharacters hr, #searchForCharacters h6{
+    color: #e0d9f6;
+}
+#searchForCharacters h6{
+    font-size: x-large;
+}
+@media (max-width:768px) {
+    #searchForCharacters h6{
+        font-size: medium;
+    }
+    .parentOfRecommend h6{
+        font-size: medium;
+    }
+}
+.inputCharacterSearch{
+    background-color: #130c3d !important;
+    border-color: aqua;
+    color: #e0d9f6 !important;
+}
+.buttonCharacterSearch{
+    background-color: aqua;
+    color: #130c3d;
+}
+.buttonCharacterSearch:hover{
+    color: #e0d9f6;
+}
+@media (min-width:1300px) {
+    .cardTitleDescription{
+        font-size: xx-large;
+    }
+    .cardTextDescription{
+        font-size: x-large;
+    }
+    .cardFotterDescription{
+        font-size: large;
+    }
+    
+}
+
+
+.selectYear{
+    position: relative;
+}
+.selectYearLi{
+    position: relative;
+}
+.hidden{
+    display: none !important;
+}
+.inputSelect{
+
+    display:inline-block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    border:0;
+    padding:0;
+    outline:none;
+    margin:0 24px 0 0;
+    height: 90%;
+    width: 80%;
+}
+.addToListSeason{
+    background-color: aqua !important;
+}
+.inputGroupSeason button{
+    font-size: small  !important;
+}
+@media (min-width: 1300px) {
+    .inputGroupSeason button{
+        font-size: x-large  !important;
+    }
+    .genersOfSeason{
+        font-size: large !important;
+    }
+}
+@media (max-width: 320px) {
+    .inputGroupSeason button{
+        font-size: smaller  !important;
+    }
+}
+.card{
+    /* width: ; */
+    /* height: 170px; */
+    background-color: #130c3d;
+    border-color: aqua;
+    color: #e0d9f6;
+    font-size: x-small;
+}
+footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    background-image: url(/images/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* opacity: 0.1; */
+}
+.coverBackGroudFooter{
+    width: 100%;
+    height: 100%;
+    background-color: #130c3dc9;
+}
+.footerText{
+    color: #e0d9f6;
+    height: 100%;
+}
+.footerText .row{
+    height: 100%;
+}
+.footerText ul{
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+.footerText ul li:hover{
+    text-decoration: underline;
+}
+.footerText i{
+    cursor: pointer;
+}
+#liveAlertPlaceholder1 .btn-close{
+    background-color: #33333300;
+}
+#liveAlertPlaceholderrrr .btn-close{
+    background-color: #33333300;
+}
+#liveAlertPlaceholder3 .btn-close{
+    background-color: #33333300;
+}
