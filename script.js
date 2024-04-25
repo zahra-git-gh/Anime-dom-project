@@ -1,5 +1,5 @@
-import{createElement1, selectedElement} from "../utils/domUtils.js";
-import{setData ,getDataStorage ,removeData, setSearch} from "../utils/storage.js"
+import{createElement1, selectedElement} from "./domUtils.js";
+import{setData ,getDataStorage ,removeData, setSearch} from "./storage.js"
 
 
 //!start slider for geners

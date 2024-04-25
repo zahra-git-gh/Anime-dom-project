@@ -1,5 +1,5 @@
-import{createElement1, selectedElement} from "../utils/domUtils.js";
-import{setData ,getDataStorage ,removeData} from "../utils/storage.js"
+import{createElement1, selectedElement} from "./domUtils.js";
+import{setData ,getDataStorage ,removeData} from "./storage.js"
 //! there are function for add to list button 
 //!and two function for remove this anime from list
 // const buttonTest=selectedElement('button')

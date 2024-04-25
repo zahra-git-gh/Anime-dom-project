@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(/images/bgLogin.jpg);
+    background-image: url(bgLogin.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

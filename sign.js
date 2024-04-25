@@ -1,5 +1,5 @@
-import{createElement1, selectedElement} from "../utils/domUtils.js";
-import{setData ,getDataStorage ,removeData} from "../utils/storage.js"
+import{createElement1, selectedElement} from "./domUtils.js";
+import{setData ,getDataStorage ,removeData} from "./storage.js"
 //select Elements
 const inputPassword=selectedElement('.passwordInput')
 const passwordHelp=selectedElement('#passwordHelpBlock small')

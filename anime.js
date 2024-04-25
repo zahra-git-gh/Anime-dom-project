@@ -1,5 +1,5 @@
-import{createElement1, selectedElement} from "../utils/domUtils.js";
-import{setData ,getDataStorage ,removeData, removeDataSearch} from "../utils/storage.js"
+import{createElement1, selectedElement} from "./domUtils.js";
+import{setData ,getDataStorage ,removeData, removeDataSearch} from "./storage.js"
 //---show result for input search
 //--select elements
 const buttonSearch=selectedElement('.buttonSearch')
